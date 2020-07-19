@@ -1,0 +1,165 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Jekyll Theme Gal
+email: kp.audinot@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A port and slight re-design of Hexo Theme Gal.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-font-awesome-sass
+
+# Hexo Theme Gal variables
+use_logo: false
+logo_image:
+navbar_text:
+
+xs_bg_image: xsbg.gif
+
+author_image: avatar.jpg
+
+programmer_mode: false
+
+menu:
+  # index
+  - title: Home
+    icon: home
+    url: /
+  # archives
+  - title: Archive
+    icon: archive
+    url: archives
+  # categories
+  - title: Categories
+    icon: list
+    url: categories
+    dropdown: 3
+  # tags
+  - title: Tags
+    icon: tags
+    url: tags
+    dropdown: 3
+  # about
+  - title: About
+    icon: user
+    url: about
+
+# Default images for blog posts
+default_preview:
+  - preview1.jpg
+  - preview2.jpg
+  - preview3.jpg
+  - preview4.jpg
+
+# Sidebars
+sidebar:
+  recent_comments: true
+  hot_posts: true
+  recent_posts: true
+  random_posts: true
+  tags: true
+  friend_links: true
+  links: true
+
+friend_links:
+  - name: KDays Forum
+    link: http://kdays.net/days/
+  - name: Gal Theme
+    link: http://www.gal123.com/
+  - name: Moe Link
+    link: http://www.moe123.com/
+
+links:
+  - name: Github
+    link: https://github.com/ZEROKISEKI/
+  - name: Coding
+    link: https://coding.net/u/SORA1
+  - name: Aonosora
+    link: https://www.zhihu.com/people/aonosora/activities
+
+# Issue = Announcement box
+use_issue: true
+
+# For highlighting code...
+highlight_theme: atom-one-dark
+
+# Slideshow background
+slide_background:
+  use_url: false
+  prefix: slide/background
+  ext: jpg
+  max_count: 6
+
+# Use the Oni pictures. I don't know what this actually does
+open_oni: false
+# 欧尼酱功能设置, 前提为open_oni: true
+oni_setting:
+  # 限三项, 可以自己配置链接(一般是上面的menu或者自己的page)
+  - title: 归档
+    url: archives
+  - title: 关于
+    url: about
+  - title: 留言板
+    url: message
+
+# Power mode
+power_mode:
+  colorful: true
+  shake: true
+
+# No comments please
+use_comment: false
+
+# sass information
+sass:
+  sass_dir: ./source/css
+  outputStyle: compressed
+  precision: 5
+  sourceComments: false
+
+font-awesome:
+  assets: true
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
