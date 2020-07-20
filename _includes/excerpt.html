@@ -1,8 +1,9 @@
 ---
 ---
 
-<div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    <!-- For long articles -->
+
+<div class="article well clearfix article article-body excerpt" data-aos="flip-up">
+  {% if post.categories contains "highlight" %}
     <section class="hidden-xs">
         <div class="title-article">
             <h1>
@@ -23,12 +24,14 @@
           -->
 
         </div>
+
         <div class="alert alert-gal article-body content-article">
             <div class="item">
                 <a href="{{ site.url }}/{{ post.url }}">
                     <div class="img">
                         <img src="{{ site.url }}/source/imgs/preview/preview1.jpg" alt="{{ post.title }}">
                     </div>
+
                     <div class="info">
                         {{ post.excerpt }}
                     </div>
@@ -36,6 +39,7 @@
             </div>
         </div>
     </section>
+  {% else %}
     <section class="visible-xs">
         <div class="title-article">
             <center>
@@ -61,6 +65,7 @@
             {% endif %}
         </center>
         <p></p>
+
         <div class="alert alert-gal article-body content-article">
             <p style="text-align: center;">
                 <a href="{{ site.url }}/{{ post.url }}">
@@ -70,11 +75,12 @@
         </div>
         {% if post.excerpt %}
         <div class="alert alert-gal">
-            {{ post.excerpt }}
+            {{ post.excerpt }} ...
         </div>
         {% endif %}
         <a class="btn btn-danger pull-right read-more btn-block" href="{{ site.url }}/{{ post.url }}">
             Read more...
         </a>
     </section>
+    {% endif %}
 </div>
