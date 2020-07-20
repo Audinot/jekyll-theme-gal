@@ -25,7 +25,7 @@
         </div>
         <div class="alert alert-gal article-body content-article">
             <div class="item">
-                <a href="{{ post.url }}">
+                <a href="{{ site.url }}/{{ post.url }}">
                     <div class="img">
                         <img src="{{ site.url }}/source/imgs/preview/preview1.jpg" alt="{{ post.title }}">
                     </div>
@@ -40,7 +40,7 @@
         <div class="title-article">
             <center>
                 <h4>
-                    <a href="{{ post.url }}">
+                    <a href="{{ site.url }}/{{ post.url }}">
                         <span>{{ post.title }}</span>
                     </a>
                 </h4>
@@ -56,14 +56,14 @@
             {% if post.tags %}
               <i class="fa fa-tags"></i>
               {% for tag in post.tags %}}
-                <a href="{{ tag.url }}">{{ tag.title }}</a>
+                <a href="{{ site.url }}/{{ tag.url }}">{{ tag.title }}</a>
               {% endfor %}
             {% endif %}
         </center>
         <p></p>
         <div class="alert alert-gal article-body content-article">
             <p style="text-align: center;">
-                <a href="{{ post.url }}">
+                <a href="{{ site.url }}/{{ post.url }}">
                     <img src="{{ site.url }}/source/imgs/preview/preview2.jpg" alt="{{ post.title }}">
                 </a>
             </p>
@@ -73,7 +73,7 @@
             {{ post.excerpt }}
         </div>
         {% endif %}
-        <a class="btn btn-danger pull-right read-more btn-block" href="{{ post.url }}">
+        <a class="btn btn-danger pull-right read-more btn-block" href="{{ site.url }}/{{ post.url }}">
             Read more...
         </a>
     </section>
