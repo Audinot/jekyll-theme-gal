@@ -1,13 +1,11 @@
 {% include head.html %}
 
-This is a test.
-{% for post in site.posts %}
-<div>
-  <h1>{{ post.title }}</h1>
-  <br>
-  {{ post.content }}
-  <br>
-</div>
-{% endfor %}
+
+
+<div id="article-list">
+  {% for post in site.posts %}
+      {% include excerpt.html %}
+  {% endfor %}
+
 
 {% include footer.html %}
